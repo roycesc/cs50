@@ -3,45 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 | GIT | CS50</title>
-    <style>
-        body {
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            color: black;
-            padding: 20px;
-            line-height: 125%;
-        }
-        table {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        p {
-            padding-left: 15px;
-
-        }
-
-        tr {
-            text-align: left;
-            
-        }
-        th {
-            background-color: gray;
-        }
-        td, th{
-            padding: 10px;
-            border-top: .5px dotted gray;
-        }
-
-        .code {
-            font-family: 'Courier New', Courier, monospace;
-            color: rgb(2, 212, 2);
-            background-color: black;
-            letter-spacing: 110%;
-            padding: 5px;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
@@ -53,17 +15,17 @@
             <li>Follow the prompts and enter in details</li>
             <li>Copy the https github link</li>
             <li>Open terminal and go to the directory you want the clone project in</li>
-            <li>To clone the git to your local system - type in <a class="code">%git clone &lt;git@github.com:roycesc/<i>name_of_git.git&gt;</i></a></li>
-            <li>To add a file to the git repository type in to terminal - <a class="code">%git add &lt;filename&gt;</a></li>
-            <li>To commit the changes type git commit -m "message"</li>
+            <li>To clone the git to your local system - type in <span class="code">%git clone &lt;git@github.com:roycesc/<i>name_of_git.git&gt;</i></span></li>
+            <li>To add a file to the git repository type in to terminal - <span class="code">%git add &lt;filename&gt;</span></li>
+            <li>To commit the changes type <span class="code">git commit -m "message"</span></li>
             <li>Final step - push the local git to the github online repository, in the terminal</li>
                 <ul>
-                    <li>Run <a class="code">% git status</a></li>
-                    <li>Run <a class="code">% git push</a></li>
+                    <li>Run <span class="code">% git status</span></li>
+                    <li>Run <span class="code">% git push</span></li>
                 </ul>
         </ol>
         <h2>Add & Commit</h2>
-        <p>If you want to add all the files and commit at the same time - %git commit -am "comment"- which means commit all the files that have changes and a message. The push it to the github repository %git push</p>
+        <p>If you want to add all the files and commit at the same time - <span class="code">%git commit -am "comment"</span> - which means commit all the files that have changes and a message. The push it to the github repository <span class="code">%git push</span></p>
 
         <h2>Pull form github - Get the latest version from the repository</h2>
         <p class="code">%git pull</p>
@@ -77,8 +39,8 @@
         <ol>
             <li>Remove all the merge conflict markers from the file</li>
             <li>Modify the file until the programmer is happy with it</li>
-            <li>The do a <a class="code">% git commit -am "Fix the merge issues"</a></li>
-            <li><a class="code">% git push</a></li>
+            <li>The do a <span class="code">% git commit -am "Fix the merge issues"</span></li>
+            <li><span class="code">% git push</span></li>
         </ol>
     </div>
     <div>
@@ -104,6 +66,9 @@
     <div>
         <h2>Branching</h2>
         <p>Branching gives you the ability to work on a feature without disturbing the master version of the code</p>
+    </div>
+    <div>
+    <button class="button button-left" onclick="location.href = '0_html_basics.html';" id="prevButton">< Previous</button>
     </div>
 </body>
 </html>

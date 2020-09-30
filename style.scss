@@ -1,51 +1,54 @@
 $main-font:         Helvetica, sans-serif;
 
-$600-text-colour:   black;
-$600-background:    white;
+$lrg-text-colour:   black;
+$lrg-background:    white;
+$lrg-border-colour: black;
 
-$599-text-colour:   white;
-$588-background:    black;
+$sml-text-colour:   white;
+$sml-background:    black;
+$sml-border-colour:  white;
+
+div {
+    padding: 20px;
+    margin: 20px;
+    font-family: $main-font;
+    font-weight: 100;
+    line-height: 150%;
+    border-collapse: collapse;
+}
 
 
 @media (min-width: 600px) {
     body {
-        background-color: $600-background;
+        background-color: $lrg-background;
+        padding-bottom: 50px;
     }
     h1 {
-        color: $600-text-colour;
+        color: $lrg-text-colour;
         text-align: left;
         font-weight: 300;
     }
 
     h2 {
-        color: $600-text-colour;
+        color: $lrg-text-colour;
         text-align: left;
         font-weight: 300;
         border-top: 1px black;
     }
 
     h3 {
-        color: $600-text-colour;
+        color: $lrg-text-colour;
         text-align: left;
         font-weight: 200;
     }
 
-
-    div {
-        padding: 20px;
-        margin: 20px;
-        font-family: $main-font;
-        font-weight: 100;
-        border-collapse: collapse;
-    }
-
     table {
         padding: 10px;
-        border: 1px solid $600-text-colour;
+        border: 1px solid $lrg-text-colour;
     }
 
     th {
-        border-bottom: solid $600-text-colour;
+        border-bottom: solid $lrg-text-colour;
         padding: 10px;
     }
 
@@ -62,101 +65,164 @@ $588-background:    black;
     /* To style anything in a class */
 
     .para_text {
-        line-height: 150%;
         text-align: justify;
-        color: $600-text-colour;
+        color: $lrg-text-colour;
         vertical-align:baseline;
-        line-height: 1;
+
     }
 
     .inside_border {
         border-right: 00.5px dotted gray;
     }
 
-    .code {
+    %lrg-base-code {
+        background-color: $sml-background;
         font-family: 'Courier New', Courier, monospace;
-        color: rgb(2, 212, 2);
-        background-color: black;
         letter-spacing: 110%;
         padding: 5px;
+    }
+
+
+
+    .code {
+        @extend %lrg-base-code;
+        color: rgb(2, 212, 2);
+
+    }
+    .sass-var {
+        @extend %lrg-base-code;
+        color: rgb(7, 197, 255);
+    }
+
+    .sass-int {
+        @extend %lrg-base-code;
+        color: rgb(255, 44, 7);
     }
 
     ul, ol {
         /* list-style:none <- turns numbers or dots on or off*/ 
     }
 
+    button {
+        background-color: $lrg-background;
+        border-radius: 28px;
+        border: 1px solid $lrg-border-colour;
+        font-family: $main-font;
+        text-align: center;
+        font-size: medium;
+        color: $lrg-text-colour;
+        height: 40px;
+        width: 120px;
+        transition-duration: 0.4s;
+    }
+
+    .button:hover {
+        background-color: $lrg-border-colour ;
+        color: white;
+      }
+
+
 }
+
 
 @media (max-width: 599px) {
     body{
-        background-color: $588-background;
-        color: $599-text-colour;
+        background-color: $sml-background;
+        color: $sml-text-colour;
+        padding: 20px;
     }
     h1 {
-        color: $599-text-colour;
+        color: $sml-text-colour;
         text-align: left;
         font-weight: 300;
     }
 
     h2 {
-        color: $599-text-colour;
+        color: $sml-text-colour;
         text-align: left;
         font-weight: 300;
-        border-top: 1px $599-text-colour;
+        border-top: 1px $sml-text-colour;
     }
 
     h3 {
-        color: $599-text-colour;
+        color: $sml-text-colour;
         text-align: left;
         font-weight: 200;
     }
 
-    div {
-        padding: 20px;
-        margin: 20px;
-        font-family: $main-font;
-        font-weight: 100;
-        border-collapse: collapse;
-    }
 
     table {
         padding: 10px;
-        border: 1px solid $599-text-colour;
+        border: 1px solid $sml-text-colour;
     }
 
     th {
-        border-bottom: solid w$599-text-colourhite;
+        border-bottom: solid $sml-text-colour;
         padding: 10px;
     }
 
     td, tr {
-        border-bottom: 0.5px dotted $599-text-colour;
+        border-bottom: 0.5px dotted $sml-text-colour;
         padding: 5px;
     }
 
     /* one off styling linked to id*/
     #special_id_h1 {
-        color: $599-text-colour;
+        color: $sml-text-colour;
     }
 
     /* To style anything in a class */
 
-    .para_text {
-        line-height: 150%;
-        text-align: justify;
-        color: $599-text-colour;
-        vertical-align:baseline;
-        line-height: 1;
-    }
 
-    .inside_border {
-        border-right: 00.5px dotted $599-text-colour;
-    }
 
     ul, ol {
-        /* list-style:none <- turns numbers or dots on or off*/ 
+        /* list-style:none <- turns numbers or dots on or off*/
+    }
+
+    %sml-base-code {
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 110%;
+        padding: 5px;
+        background-color: $sml-background;
+    }
+
+    .code {
+        @extend %sml-base-code;
+        color: rgb(2, 212, 2);
+
+    }
+    .sass-var {
+        @extend %sml-base-code;
+        color: rgb(7, 197, 255);
+    }
+
+    .sass-int {
+        @extend %sml-base-code;
+        color: rgb(255, 44, 7);
+    }
+
+    button {
+        
+        background-color: $sml-background;
+        border-radius: 28px;
+        border: 1px solid $sml-border-colour;
+        font-family: $main-font;
+        text-align: center;
+        font-size: medium;
+        color: $sml-border-colour;
+        height: 40px;
+        width: 120px;
     }
 
 
 }
+
+.button-left {
+    float: left;
+}
+
+.button-right {
+    float: right;
+}
+
 

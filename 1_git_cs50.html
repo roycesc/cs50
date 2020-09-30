@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 | GIT | CS50</title>
+    <style>
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: black;
+            padding: 20px;
+            line-height: 125%;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        p {
+            padding-left: 15px;
+
+        }
+
+        tr {
+            text-align: left;
+            
+        }
+        th {
+            background-color: gray;
+        }
+        td, th{
+            padding: 10px;
+            border-top: .5px dotted gray;
+        }
+
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(2, 212, 2);
+            background-color: black;
+            letter-spacing: 110%;
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>1 - GIT - CS50</h1>
+        <h2>Steps to set up GITHUB</h2>
+        <ol>
+            <li>Log in to Github</li>
+            <li>Go to <a href="https://github.com/new/">www.github/new</a></li>
+            <li>Follow the prompts and enter in details</li>
+            <li>Copy the https github link</li>
+            <li>Open terminal and go to the directory you want the clone project in</li>
+            <li>To clone the git to your local system - type in <a class="code">%git clone &lt;git@github.com:roycesc/<i>name_of_git.git&gt;</i></a></li>
+            <li>To add a file to the git repository type in to terminal - <a class="code">%git add &lt;filename&gt;</a></li>
+            <li>To commit the changes type git commit -m "message"</li>
+            <li>Final step - push the local git to the github online repository, in the terminal</li>
+                <ul>
+                    <li>Run <a class="code">% git status</a></li>
+                    <li>Run <a class="code">% git push</a></li>
+                </ul>
+        </ol>
+        <h2>Add & Commit</h2>
+        <p>If you want to add all the files and commit at the same time - %git commit -am "comment"- which means commit all the files that have changes and a message. The push it to the github repository %git push</p>
+
+        <h2>Pull form github - Get the latest version from the repository</h2>
+        <p class="code">%git pull</p>
+    </div>
+    <div>
+        <h2>Merge Conflict</h2>
+        <p>If there are conflicts, git will alert to these issues.  Conflict happen on a line by line item, if a single line of code has been edited by 
+            git will alert the programmer to the difference to each line and will require the programmer to make the adjustments.
+        </p>
+        <p>To remove these issues you need to;</p>
+        <ol>
+            <li>Remove all the merge conflict markers from the file</li>
+            <li>Modify the file until the programmer is happy with it</li>
+            <li>The do a <a class="code">% git commit -am "Fix the merge issues"</a></li>
+            <li><a class="code">% git push</a></li>
+        </ol>
+    </div>
+    <div>
+        <h2>Useful git commands</h2>
+        <table>
+                <th>Git Command</th> <th>Description</th>
+            <tbody>
+                <tr>
+                    <td class="code">% git log</td> <td>Useful to read all the commits made</td>
+                </tr>
+                <tr>
+                    <td class="code">% git reset</td> <td>To go back to an earlier commit</td>
+                </tr>
+                <tr>
+                    <td class="code">% git reset --hard &lt;hash commit&gt;</td> <td>Type in the has from git log to roll back to that version</td>
+                </tr>
+                <tr>
+                    <td class="code">% git reset --hard origin/master</td> <td>Reverts back to the last commit on the git hub repository</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Branching</h2>
+        <p>Branching gives you the ability to work on a feature without disturbing the master version of the code</p>
+    </div>
+</body>
+</html>

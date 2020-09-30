@@ -1,0 +1,162 @@
+$main-font:         Helvetica, sans-serif;
+
+$600-text-colour:   black;
+$600-background:    white;
+
+$599-text-colour:   white;
+$588-background:    black;
+
+
+@media (min-width: 600px) {
+    body {
+        background-color: $600-background;
+    }
+    h1 {
+        color: $600-text-colour;
+        text-align: left;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: $600-text-colour;
+        text-align: left;
+        font-weight: 300;
+        border-top: 1px black;
+    }
+
+    h3 {
+        color: $600-text-colour;
+        text-align: left;
+        font-weight: 200;
+    }
+
+
+    div {
+        padding: 20px;
+        margin: 20px;
+        font-family: $main-font;
+        font-weight: 100;
+        border-collapse: collapse;
+    }
+
+    table {
+        padding: 10px;
+        border: 1px solid $600-text-colour;
+    }
+
+    th {
+        border-bottom: solid $600-text-colour;
+        padding: 10px;
+    }
+
+    td, tr {
+        border-bottom: 0.5px dotted gray;
+        padding: 5px;
+    }
+
+    /* one off styling linked to id*/
+    #special_id_h1 {
+        color: darkgray;
+    }
+
+    /* To style anything in a class */
+
+    .para_text {
+        line-height: 150%;
+        text-align: justify;
+        color: $600-text-colour;
+        vertical-align:baseline;
+        line-height: 1;
+    }
+
+    .inside_border {
+        border-right: 00.5px dotted gray;
+    }
+
+    .code {
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(2, 212, 2);
+        background-color: black;
+        letter-spacing: 110%;
+        padding: 5px;
+    }
+
+    ul, ol {
+        /* list-style:none <- turns numbers or dots on or off*/ 
+    }
+
+}
+
+@media (max-width: 599px) {
+    body{
+        background-color: $588-background;
+        color: $599-text-colour;
+    }
+    h1 {
+        color: $599-text-colour;
+        text-align: left;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: $599-text-colour;
+        text-align: left;
+        font-weight: 300;
+        border-top: 1px $599-text-colour;
+    }
+
+    h3 {
+        color: $599-text-colour;
+        text-align: left;
+        font-weight: 200;
+    }
+
+    div {
+        padding: 20px;
+        margin: 20px;
+        font-family: $main-font;
+        font-weight: 100;
+        border-collapse: collapse;
+    }
+
+    table {
+        padding: 10px;
+        border: 1px solid $599-text-colour;
+    }
+
+    th {
+        border-bottom: solid w$599-text-colourhite;
+        padding: 10px;
+    }
+
+    td, tr {
+        border-bottom: 0.5px dotted $599-text-colour;
+        padding: 5px;
+    }
+
+    /* one off styling linked to id*/
+    #special_id_h1 {
+        color: $599-text-colour;
+    }
+
+    /* To style anything in a class */
+
+    .para_text {
+        line-height: 150%;
+        text-align: justify;
+        color: $599-text-colour;
+        vertical-align:baseline;
+        line-height: 1;
+    }
+
+    .inside_border {
+        border-right: 00.5px dotted $599-text-colour;
+    }
+
+    ul, ol {
+        /* list-style:none <- turns numbers or dots on or off*/ 
+    }
+
+
+}
+

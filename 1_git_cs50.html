@@ -65,10 +65,41 @@
     </div>
     <div>
         <h2>Branching</h2>
-        <p>Branching gives you the ability to work on a feature without disturbing the master version of the code</p>
+        <p>
+            Branching gives you the ability to work on a feature without disturbing the master version of the code. 
+            Each branch is going to have its own name the "master" branch that has the stable code and a "feature" 
+            branch, where you working on a feature.  At anyone time, you are only working on one of the branches.  
+            The current state you are working on is called the head.  You can switch between branches by nominating the 
+            head.  Once you are happy with the feature you can merge the branches.
+        </p>
     </div>
     <div>
-    <button class="button button-left" onclick="location.href = '0_html_basics.html';" id="prevButton">< Previous</button>
+        <h2>Useful git branching commands</h2>
+        <table>
+                <th>Git Command</th> <th>Description</th>
+            <tbody>
+                <tr>
+                    <td class="code">% git branch </td> <td>Will tell you what branch you are currently working on. The '*' indicates which branch you are currently working on</td>
+                </tr>
+                <tr>
+                    <td class="code">% git checkout -b <i>name_of_branch</i></td> <td>This will create and switch to a new branch, in this case it is call <i>name_of_branch</i></td>
+                </tr>
+                <tr>
+                    <td class="code">% git commit -am "message" </td> <td>This will make a commitment to the current branch you are working on</td>
+                </tr>
+                <tr>
+                    <td class="code">% git checkout <i>name_of_branch</i></td> <td>Will switch between branches, using the name of the branch at the end</td>
+                </tr>
+                <tr>
+                    <td class="code">% git merge <i>name_of_feature_branch</i></td> <td>Type this to merge the feature branch in to the master.  Make sure you have switched to the master or the branch you want merge. Then commit after adjusting any conflicts</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    <div>
+        <button class="button button-left" onclick="location.href = '0_html_basics.html';" id="prevButton">< Previous</button>
+        <button class="button button-right" onclick="location.href = '2_python_cs50.html';" id="nextButton">Next ></button>
+    </div>
+
 </body>
 </html>

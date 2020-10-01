@@ -42,13 +42,13 @@
                     <td>10 911 m</td>
                 </tr>
                 <tr>
-                    <td>Atlatic Ocean</td>
+                    <td>Atlantic Ocean</td>
                     <td>3 646 m</td>
                     <td>8 486 m</td>
                 </tr>
             </tbody>
         </table>
-        <h2>Forms</h2>
+        <h2>Forms - Examples</h2>
         <h3>Inputs</h3>
         <form action="">
             <input type="text" placeholder="Full Name" name="full_name">
@@ -63,6 +63,7 @@
             <input type="radio" name="colour" value="green" id="">Green
         </div>
         <div>
+            <p>Using a datalist combines dropdown and search in one element</p>
             <input name="country" list="countries" placeholder="Country">
             <datalist id="countries">
                 <option value="Afghanistan">
@@ -76,10 +77,10 @@
     </div>
     <div class="para_text">
         <h2>CSS</h2>
-        <p>You can add to exsiting styles like &lt;h1&gt; by either adding <b><i>inline</i></b> styles like &lt;h1 "text-align: center;"&gt; or via using a css style sheet/file normally name 
+        <p>You can add to exsisting styles like <span class="code">&lt;h1&gt; by either adding <b><i>inline</i></b> styles like &lt;h1 "text-align: center;"&gt;</span> or via using a css style sheet/file normally name 
             "style.css".</p>
-            <p>Within the css file you can use the <b><i>id</i></b> attribute, matching the id="name" with the #name in the css style sheet, this is used for one off reasons, as you can't 
-            use id="name" on more then one html markup.</p>
+            <p>Within the css file you can use the <span class="code"><b><i>id</i></b></span> attribute, matching the <span class="code">id="name"</span> with the #name in the css style sheet, this is used for one off reasons, as you can't 
+            use <span class="code">id="name"</span> on more then one html markup.</p>
         <p>You can use class type that can be used in many different attributes simple by adding the class as the attribute. You can also add the same type of styles to the same mark up by adding a comma
             between the marks like ul, ol { list-style:none }.</p>
         <p>Finally, there's <b><i>types</i></b> these start with a "." - <i>for example</i> - .type, they can be used with the class type attribute to modify individual html tags.</p>
@@ -123,20 +124,27 @@
         <h2>Responsive Design</h2>
         <h3>Viewport</h3>
         <p>Add this line to force a mobile device to use the full width of their screen</p>
-        <p>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0&gt;</p>
+        <p class="code">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0&gt;</p>
     </div>
     <div>
         <h2>Sass</h2>
         <p>Sass basically puts variables into css to make it easier to quickly updates styles
             You can also nest and make models, like inheriting from a base document.
         </p>
-        <p>Too install % use Sass</p>
+        <p>Too install terminal</p>
         <ol>
             <li>Brew install (gross) or npr install - <a class="code">% npm install -g sass</a></li>
             <li>Create a scss file <a class="code">% touch style.scss</a></li>
             <li>Copy over you existing css</li>
             <li>Add some variables at the top using the <a class="sass-var">$variable:</a><a class="sass-int"> white;</a></li>
+            <li>To update the .css file with the .scss type in the consol <span class="code">sass name_of_scss_file.scss name_of_css.css</span></li>
         </ol>
+    </div>
+    <div>
+        <p>
+            If you are making a lot of changes to the style sheet, you might want to turn on sass watch, this will
+            auto update the css file with you have to manually updating. Do this by <span class="code">sass --watch name_of_scss_file.scss name_of_css.css </span>
+        </p>
     </div>
     <div>
     <button class="button button-right" onclick="location.href = '1_git_cs50.html';" id="nextButton">Next ></button>

@@ -8,6 +8,10 @@ $sml-text-colour:   white;
 $sml-background:    black;
 $sml-border-colour:  white;
 
+body {
+    padding-bottom: 50px;
+}
+
 div {
     padding: 20px;
     margin: 20px;
@@ -17,44 +21,73 @@ div {
     border-collapse: collapse;
 }
 
+h1 {
+    text-align: left;
+    font-weight: 300;
+}
+
+h2 {
+    text-align: left;
+    font-weight: 300;
+}
+
+h3 {
+    text-align: left;
+    font-weight: 200;
+}
+
+div > table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td, tr{
+    padding: 10px;
+}
+
+.para_text {
+    text-align: justify;
+    vertical-align:baseline;
+}
+
+button {
+    border-radius: 28px;
+    font-family: $main-font;
+    text-align: center;
+    font-size: medium;
+    height: 40px;
+    width: 120px;
+    transition-duration: 0.4s;
+}
+
 
 @media (min-width: 600px) {
     body {
         background-color: $lrg-background;
-        padding-bottom: 50px;
     }
+
     h1 {
         color: $lrg-text-colour;
-        text-align: left;
-        font-weight: 300;
     }
 
     h2 {
         color: $lrg-text-colour;
-        text-align: left;
-        font-weight: 300;
-        border-top: 1px black;
     }
 
     h3 {
         color: $lrg-text-colour;
-        text-align: left;
-        font-weight: 200;
     }
 
     table {
-        padding: 10px;
         border: 1px solid $lrg-text-colour;
     }
 
     th {
         border-bottom: solid $lrg-text-colour;
-        padding: 10px;
     }
 
     td, tr {
         border-bottom: 0.5px dotted gray;
-        padding: 5px;
     }
 
     /* one off styling linked to id*/
@@ -65,10 +98,7 @@ div {
     /* To style anything in a class */
 
     .para_text {
-        text-align: justify;
         color: $lrg-text-colour;
-        vertical-align:baseline;
-
     }
 
     .inside_border {
@@ -83,45 +113,21 @@ div {
     }
 
 
-
-    .code {
-        @extend %lrg-base-code;
-        color: rgb(2, 212, 2);
-
-    }
-    .sass-var {
-        @extend %lrg-base-code;
-        color: rgb(7, 197, 255);
-    }
-
-    .sass-int {
-        @extend %lrg-base-code;
-        color: rgb(255, 44, 7);
-    }
-
     ul, ol {
-        /* list-style:none <- turns numbers or dots on or off*/ 
+        /* list-style:none <- turns numbers or dots on or off*/
     }
 
     button {
         background-color: $lrg-background;
-        border-radius: 28px;
         border: 1px solid $lrg-border-colour;
         font-family: $main-font;
-        text-align: center;
-        font-size: medium;
         color: $lrg-text-colour;
-        height: 40px;
-        width: 120px;
-        transition-duration: 0.4s;
     }
 
     .button:hover {
         background-color: $lrg-border-colour ;
         color: white;
-      }
-
-
+    }
 }
 
 
@@ -129,30 +135,21 @@ div {
     body{
         background-color: $sml-background;
         color: $sml-text-colour;
-        padding: 20px;
     }
     h1 {
         color: $sml-text-colour;
-        text-align: left;
-        font-weight: 300;
     }
 
     h2 {
         color: $sml-text-colour;
-        text-align: left;
-        font-weight: 300;
         border-top: 1px $sml-text-colour;
     }
 
     h3 {
         color: $sml-text-colour;
-        text-align: left;
-        font-weight: 200;
     }
 
-
     table {
-        padding: 10px;
         border: 1px solid $sml-text-colour;
     }
 
@@ -173,8 +170,6 @@ div {
 
     /* To style anything in a class */
 
-
-
     ul, ol {
         /* list-style:none <- turns numbers or dots on or off*/
     }
@@ -186,35 +181,30 @@ div {
         background-color: $sml-background;
     }
 
-    .code {
-        @extend %sml-base-code;
-        color: rgb(2, 212, 2);
-
-    }
-    .sass-var {
-        @extend %sml-base-code;
-        color: rgb(7, 197, 255);
-    }
-
-    .sass-int {
-        @extend %sml-base-code;
-        color: rgb(255, 44, 7);
-    }
-
     button {
-        
         background-color: $sml-background;
-        border-radius: 28px;
         border: 1px solid $sml-border-colour;
-        font-family: $main-font;
-        text-align: center;
-        font-size: medium;
         color: $sml-border-colour;
-        height: 40px;
-        width: 120px;
     }
+}
 
+.code {
+    @extend %lrg-base-code;
+    color: rgb(2, 212, 2);
 
+}
+.sass-var {
+    @extend %lrg-base-code;
+    color: rgb(7, 197, 255);
+}
+
+.sass-int {
+    @extend %lrg-base-code;
+    color: rgb(255, 44, 7);
+}
+.python {
+    @extend %lrg-base-code;
+    color: yellow;
 }
 
 .button-left {
@@ -224,5 +214,3 @@ div {
 .button-right {
     float: right;
 }
-
-

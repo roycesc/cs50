@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 50px;
+}
+
 div {
   padding: 20px;
   margin: 20px;
@@ -7,44 +11,72 @@ div {
   border-collapse: collapse;
 }
 
+h1 {
+  text-align: left;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: left;
+  font-weight: 300;
+}
+
+h3 {
+  text-align: left;
+  font-weight: 200;
+}
+
+div > table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td, tr {
+  padding: 10px;
+}
+
+.para_text {
+  text-align: justify;
+  vertical-align: baseline;
+}
+
+button {
+  border-radius: 28px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  font-size: medium;
+  height: 40px;
+  width: 120px;
+  transition-duration: 0.4s;
+}
+
 @media (min-width: 600px) {
   body {
     background-color: white;
-    padding-bottom: 50px;
   }
 
   h1 {
     color: black;
-    text-align: left;
-    font-weight: 300;
   }
 
   h2 {
     color: black;
-    text-align: left;
-    font-weight: 300;
-    border-top: 1px black;
   }
 
   h3 {
     color: black;
-    text-align: left;
-    font-weight: 200;
   }
 
   table {
-    padding: 10px;
     border: 1px solid black;
   }
 
   th {
     border-bottom: solid black;
-    padding: 10px;
   }
 
   td, tr {
     border-bottom: 0.5px dotted gray;
-    padding: 5px;
   }
 
   /* one off styling linked to id*/
@@ -54,32 +86,18 @@ div {
 
   /* To style anything in a class */
   .para_text {
-    text-align: justify;
     color: black;
-    vertical-align: baseline;
   }
 
   .inside_border {
     border-right: 0.5px dotted gray;
   }
 
-  .sass-int, .sass-var, .code {
+  .python, .sass-int, .sass-var, .code {
     background-color: black;
     font-family: "Courier New", Courier, monospace;
     letter-spacing: 110%;
     padding: 5px;
-  }
-
-  .code {
-    color: #02d402;
-  }
-
-  .sass-var {
-    color: #07c5ff;
-  }
-
-  .sass-int {
-    color: #ff2c07;
   }
 
   ul, ol {
@@ -88,15 +106,9 @@ div {
 
   button {
     background-color: white;
-    border-radius: 28px;
     border: 1px solid black;
     font-family: Helvetica, sans-serif;
-    text-align: center;
-    font-size: medium;
     color: black;
-    height: 40px;
-    width: 120px;
-    transition-duration: 0.4s;
   }
 
   .button:hover {
@@ -108,30 +120,22 @@ div {
   body {
     background-color: black;
     color: white;
-    padding: 20px;
   }
 
   h1 {
     color: white;
-    text-align: left;
-    font-weight: 300;
   }
 
   h2 {
     color: white;
-    text-align: left;
-    font-weight: 300;
     border-top: 1px white;
   }
 
   h3 {
     color: white;
-    text-align: left;
-    font-weight: 200;
   }
 
   table {
-    padding: 10px;
     border: 1px solid white;
   }
 
@@ -155,37 +159,28 @@ div {
     /* list-style:none <- turns numbers or dots on or off*/
   }
 
-  .sass-int, .sass-var, .code {
-    font-family: "Courier New", Courier, monospace;
-    letter-spacing: 110%;
-    padding: 5px;
-    background-color: black;
-  }
-
-  .code {
-    color: #02d402;
-  }
-
-  .sass-var {
-    color: #07c5ff;
-  }
-
-  .sass-int {
-    color: #ff2c07;
-  }
-
   button {
     background-color: black;
-    border-radius: 28px;
     border: 1px solid white;
-    font-family: Helvetica, sans-serif;
-    text-align: center;
-    font-size: medium;
     color: white;
-    height: 40px;
-    width: 120px;
   }
 }
+.code {
+  color: #02d402;
+}
+
+.sass-var {
+  color: #07c5ff;
+}
+
+.sass-int {
+  color: #ff2c07;
+}
+
+.python {
+  color: yellow;
+}
+
 .button-left {
   float: left;
 }
